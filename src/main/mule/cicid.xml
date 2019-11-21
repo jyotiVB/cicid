@@ -9,6 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="cicidFlow" doc:id="e274d24b-634e-4f10-95f8-22826d8ee9c2" >
 		<http:listener doc:name="Listener" doc:id="f513b32f-5c4e-441b-b55c-12bcc0c9c5eb" config-ref="HTTP_Listener_config" path="/cicid"/>
+		<set-payload value="first sample project" doc:name="Set Payload" doc:id="cc7c85e4-c7c9-435f-93fd-b33fb9ceeefb" />
 		<logger level="INFO" doc:name="Logger" doc:id="f896e93a-0bae-4b0e-a542-ec377ab415be" message="Sample Flow"/>
 		<set-payload value="cicid sample project" doc:name="Set Payload" doc:id="3b70b508-ca1f-4fc4-b9a6-29add0fec5e3" />
 	</flow>
