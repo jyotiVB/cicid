@@ -45,14 +45,13 @@
 				</CloudHubDeployment>
 				</configuration>
 				<executions>
-				<execution>
-				<id>deploy</id>
-				<phase>deploy</phase>
-				<goals>
-				<goal>deploy</goal>
-				</goals>
-				</execution>
-				</executions>
+        <execution>
+            <id>deploye</id>
+            <goals>
+                <goal>deploye</goal>
+            </goals>
+        </execution>
+    </executions>
 			</plugin>
 		</plugins>
 	</build>
