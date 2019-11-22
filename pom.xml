@@ -28,30 +28,32 @@
 				</configuration>
 				</plugin>
 				<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<configuration>
-				<CloudHubDeployment>
-				<muleVersion>${app.runtime}</muleVersion>
-				<username>ennveeprime2</username>
-				<password>ennVee@2019</password>
-				<environment>Sandbox</environment>
-				<!--  <region>eu-central-l<region> -->
-				<workerType>Micro</workerType>
-				<workers>1</workers>
-				<uri>https://anypoint.mulesoft.com</uri>;
-				<applicationName>app-cicid</applicationName>
-				</CloudHubDeployment>
-				</configuration>
-				<executions>
-        <execution>
-            <id>deploye</id>
-            <goals>
-                <goal>deploye</goal>
-            </goals>
-        </execution>
-    </executions>
+
+			<groupId>org.mule.tools.maven</groupId>
+			<artifactId>mule-maven-plugin</artifactId>
+			<version>${mule.maven.plugin.version}</version>
+			<configuration>
+			<cloudHubDeployment>
+			<uri>https://anypoint.mulesoft.com/</uri>
+			<muleVersion>${mule.version}</muleVersion>
+			<username>${anypoint.username}</username>
+			<password>${anypoint.password}</password>
+			<applicationName>jenkinstestapp</applicationName>
+			<environment>${anypoint.environment}</environment>
+			<properties>
+			<key>value</key>
+			</properties>
+			</cloudHubDeployment>
+			</configuration>
+			<executions>
+			<execution>
+			<id>deploy</id>
+			<phase>deploy</phase>
+			<goals>
+			<goal>deploy</goal>
+			</goals>
+			</execution>
+			</executions>
 			</plugin>
 		</plugins>
 	</build>
