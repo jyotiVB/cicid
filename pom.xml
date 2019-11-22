@@ -66,6 +66,11 @@
             <classifier>mule-plugin</classifier>
         </dependency>
         <dependency>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-deploy-plugin</artifactId>
+		<version>2.8.2</version>
+		</dependency>
+        <dependency>
             <groupId>org.mule.connectors</groupId>
             <artifactId>mule-sockets-connector</artifactId>
             <version>1.1.5</version>
@@ -99,6 +104,15 @@
             <layout>default</layout>
         </repository>
     </repositories>
+    <distributionManagement>
+<repository>
+<uniqueVersion>false</uniqueVersion>
+<id>corp1</id>
+<name>Corporate Repository</name>
+<url>file:///home/myfolder/.m2</url>
+<layout>default</layout>
+</repository>
+</distributionManagement>
     <pluginRepositories>
         <pluginRepository>
             <id>mulesoft-releases</id>
